@@ -6,6 +6,8 @@ macro(toolchain_ld_baremetal)
 
   # LINKERFLAGPREFIX comes from linker/ld/target.cmake
   zephyr_ld_options(
+    -nostartfiles
+    -nodefaultlibs
     -nostdlib
     -static
     -no-pie
